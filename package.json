@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "push": "git push -u origin master"
+    "push": "git push -u origin master",
+    "pull": "git pull"
   },
   "private": true,
   "dependencies": {
