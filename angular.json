@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ProjectERP"
+    }
+  },
+  "defaultProject": "ProjectERP",
+  "cli": {
+    "analytics": "a51c8f56-5424-4dc5-a8cc-845812359b75"
+  }
 }
