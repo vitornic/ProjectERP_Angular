@@ -9,14 +9,14 @@ import { usuario } from '../modelos/usuario';
 
 export class ApiService {
   redirectUrl: string;
-  baseUrl:string = "https://estockerp.netlify.app/backend";
+  PHP_API_SERVER = "http://erpe-stock.com.br/api";
+  baseUrl:string = "/backend/api";
 
   @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
 
   constructor(private httpClient : HttpClient) { }
     public userlogin(email, senha) {
-      alert(email)
-      return this.httpClient.post<any>(this.baseUrl + '/login.php', { email, senha }).pipe(map(usuario => {
+      return this.httpClient.post<any>(this.PHP_API_SERVER + '/login.php', { email, senha }).pipe(map(usuario => {
       this.setToken(usuario[0].nome);
       this.getLoggedInName.emit(true);
       return usuario;
@@ -24,7 +24,7 @@ export class ApiService {
   }
 
   public userregistration(nome, email, senha) {
-    return this.httpClient.post<any>(this.baseUrl + '/cadastro.php', { nome, email, senha }).pipe(map(usuario => {
+    return this.httpClient.post<any>(this.PHP_API_SERVER + '/cadastro.php', { nome, email, senha }).pipe(map(usuario => {
       return usuario;
     }));
   }
