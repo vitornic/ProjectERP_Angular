@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl : '/dashboard';
       this.router.navigate([redirect]);
     }, error => {
-      alert("User name or password is incorrect")
+      alert("Email ou senha incorreto")
     });
   }
 
