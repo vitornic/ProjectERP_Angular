@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   postdata(angForm1) {
     this.dataService.userlogin(angForm1.value.email,angForm1.value.password).pipe(first()).subscribe(data => {
-      const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl : '/';
+      const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl : '';
       this.router.navigate([redirect]);
     }, error => {
       console.log(JSON.stringify(error))

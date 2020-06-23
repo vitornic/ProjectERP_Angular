@@ -9,13 +9,15 @@ import {FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
+import { CClientComponent } from './pages/modulos/clientes/cadastro/c-client/c-client.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     CadastroComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    CClientComponent
   ],
   imports: [
     BrowserModule,
