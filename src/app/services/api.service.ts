@@ -16,7 +16,7 @@ export class ApiService {
   constructor(private httpClient : HttpClient) { }
     public userlogin(email, senha) {
       return this.httpClient.post<usuario>(this.PHP_API_SERVER + '/login.php', { email, senha }).pipe(map(Users => {
-      this.setToken(Users[0].NOME);
+      this.setToken(Users[0].name);
       this.getLoggedInName.emit(true);
       return Users;
     }));
