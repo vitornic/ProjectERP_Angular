@@ -7,11 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 import {FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { PrincipalComponent } from './pages/principal/principal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    CadastroComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,

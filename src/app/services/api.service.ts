@@ -9,9 +9,7 @@ import { usuario } from '../modelos/usuario';
 
 export class ApiService {
   redirectUrl: string;
-  PHP_API_SERVER = "http://erpe-stock.com.br/api";
-  //PHP_API_SERVER = "http://127.0.0.1:80/backend/api";
-  baseUrl:string = "/backend/api";
+  PHP_API_SERVER = "https://apierpe-stock1.websiteseguro.com/api";
 
   @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
 

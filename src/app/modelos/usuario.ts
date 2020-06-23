@@ -4,10 +4,10 @@ export class usuario {
     public senha:string;
     public email:string;
     
-    constructor(Id:number,nome: string,senha:string,email:string) {
-    this.Id = Id;
-    this.nome = nome;
-    this.senha = senha;
-    this.email = email;
+    constructor(Id:number, nome: string, senha:string, email:string) {
+        this.Id = Id;
+        this.nome = nome;
+        this.senha = senha;
+        this.email = email;
     }
 }

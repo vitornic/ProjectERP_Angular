@@ -30,6 +30,14 @@
     .toolbar #twitter-logo:hover {
       opacity: 0.8;
     }
+
+    a {
+      color: whitesmoke;
+    }
+
+    a:hover {
+      color: tomato;
+    }
   
 </style>
   
@@ -40,6 +48,13 @@
       alt="Angular Logo"
       src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
     />
-    <span>Welcome</span>
+    <span><a routerLink="Principal" routerLinkActive="active">Principal</a></span>
+
+    <span><a class="nav-link" *ngIf="loginbtn" routerLink="Login" routerLinkActive="active">Login</a></span>
+
+    <span><a class="nav-link" *ngIf="loginbtn" routerLink="Cadastro" routerLinkActive="active">Cadastro</a></span>
+
+    <span><button type="button" *ngIf="logoutbtn" class="btn btn-block" (click)="logout()">logout</button></span>
   </div>
+  <br><br><br>
 <router-outlet></router-outlet>
