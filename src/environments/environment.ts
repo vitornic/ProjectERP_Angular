@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  web_api_url_base: 'http://localhost/backend/'
+  production: true,
+  web_api_url_base: 'https://api.erpe-stock.com.br/api/'
 };
 
 /*

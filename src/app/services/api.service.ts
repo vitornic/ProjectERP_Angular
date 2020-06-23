@@ -15,16 +15,16 @@ export class ApiService {
 
   constructor(private httpClient : HttpClient) { }
     public userlogin(email, senha) {
-      return this.httpClient.post<usuario>(this.PHP_API_SERVER + '/login.php', { email, senha }).pipe(map(usuario => {
-      this.setToken(usuario[0].NOME);
+      return this.httpClient.post<usuario>(this.PHP_API_SERVER + '/login.php', { email, senha }).pipe(map(Users => {
+      this.setToken(Users[0].NOME);
       this.getLoggedInName.emit(true);
-      return usuario;
+      return Users;
     }));
   }
 
   public userregistration(nome, email, senha) {
-    return this.httpClient.post<usuario>(this.PHP_API_SERVER + '/cadastro.php', { nome, email, senha }).pipe(map(usuario => {
-      return usuario;
+    return this.httpClient.post<usuario>(this.PHP_API_SERVER + '/cadastro.php', { nome, email, senha }).pipe(map(Users => {
+      return Users;
     }));
   }
 
